@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C9DBE22E2EAAF48000002E5E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C9DBE22D2EAAF48000002E5E /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C9DBE1092EA9962F00002E5E /* AnimationWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBE22E2EAAF48000002E5E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = AnimationWorkshop;
 			packageProductDependencies = (
+				C9DBE22D2EAAF48000002E5E /* Lottie */,
 			);
 			productName = AnimationWorkshop;
 			productReference = C9DBE1092EA9962F00002E5E /* AnimationWorkshop.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = C9DBE1002EA9962F00002E5E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C9DBE22C2EAAF48000002E5E /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C9DBE10A2EA9962F00002E5E /* Products */;
 			projectDirPath = "";
@@ -332,6 +341,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9DBE22C2EAAF48000002E5E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9DBE22D2EAAF48000002E5E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9DBE22C2EAAF48000002E5E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9DBE1012EA9962F00002E5E /* Project object */;
 }
