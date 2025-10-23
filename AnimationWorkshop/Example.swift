@@ -12,7 +12,6 @@ struct Example: View {
     @State private var password: String = ""
     @State private var isError = false
     @State private var showSuccess = false
-    @State private var rotation: Double = 0
     let successAnimationName = "Approve"
     let confettiAnimationName = "confetti"
     
@@ -54,19 +53,14 @@ struct Example: View {
                 Button {
                     let emailEmpty = email.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                     let passwordEmpty = password.isEmpty
+                    
                     if emailEmpty || passwordEmpty {
                         showSuccess = false
-                        withAnimation(.bouncy(duration: 0.6)) {
-                            isError = true
-                            rotation += 360
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                            isError = false
-                        }
+                        isError.toggle()
                     } else {
-                        isError = false
                         showSuccess = true
                     }
+                    
                 } label: {
                     Text("Register")
                         .font(.title3.bold())
