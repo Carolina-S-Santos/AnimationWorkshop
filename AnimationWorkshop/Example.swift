@@ -10,7 +10,7 @@ import SwiftUI
 struct Example: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    @State private var isError = false
+    @State private var errorTrigger = false
     @State private var showSuccess = false
     let successAnimationName = "Approve"
     let confettiAnimationName = "confetti"
@@ -56,7 +56,7 @@ struct Example: View {
                     
                     if emailEmpty || passwordEmpty {
                         showSuccess = false
-                        isError.toggle()
+                        errorTrigger.toggle()
                     } else {
                         showSuccess = true
                     }
