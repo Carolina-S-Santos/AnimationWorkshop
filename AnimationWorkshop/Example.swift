@@ -12,6 +12,7 @@ struct Example: View {
     @State private var password: String = ""
     @State private var errorTrigger = false
     @State private var showSuccess = false
+    @State private var pulse = false
     let successAnimationName = "Approve"
     let confettiAnimationName = "confetti"
     
